@@ -61,7 +61,7 @@ public class Guc {
      */
 
     /**
-     * Mysql索引 查询优化
+     * Mysql索引 查询优化  参考面试文章 https://www.cnblogs.com/williamjie/p/11187470.html
      * 分页查询优化
      * 慢查询优化思路
      */
