@@ -86,7 +86,7 @@ public class Guc {
      */
 
     /**
-     * Redis数据结构
+     * Redis数据结构   {String <SDS动态字符串>}             【String Hash List Set Zset】
      * Redis集群
      * Kafka
      * Zookeeper
