@@ -2,6 +2,12 @@ package com.interview.experience.actual.algorithm;
 
 import java.util.Arrays;
 
+/**
+ * 归并排序
+ *
+ * @author Jiangkui
+ * @since 2019/12/17 14:32
+ */
 public class MergeSort {
     public static void main(String[] args) {
         int[] arr = new int[]{1, 3, 5, 2, 4, 6, 8, 10};
@@ -16,7 +22,7 @@ public class MergeSort {
     public static void mergeSort(int[] arr, int left, int right) {
 
         if (left >= right) return;
-        int mid = (right + left) / 2;
+        int mid = left + (right + left) >> 1;
         mergeSort(arr, left, mid);
         mergeSort(arr, mid + 1, right);
         merge(arr, left, mid, right);
