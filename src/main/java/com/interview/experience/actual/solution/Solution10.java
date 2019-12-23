@@ -79,9 +79,6 @@ public class Solution10 {
             }
 
         }
-        if (haystack.length() - i + 1 == needle.length()) {
-            return -1;
-        }
-        return i;
+        return -1;
     }
 }
