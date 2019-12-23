@@ -49,10 +49,10 @@ public class HeapSort {
         int right = 2 * index + 2;
         int maxIndex = index;
 
-        if (left < size && arr[left] > arr[index]) {
+        if (left < size && arr[left] > arr[maxIndex]) {
             maxIndex = left;
         }
-        if (right < size && arr[right] > arr[index]) {
+        if (right < size && arr[right] > arr[maxIndex]) {
             maxIndex = right;
         }
 
