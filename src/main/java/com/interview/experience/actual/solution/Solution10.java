@@ -52,7 +52,7 @@ public class Solution10 {
         return j;
     }
 
-
+    //实现indexOf 的功能
     public static int strStr(String haystack, String needle) {
         if (needle == null || needle.length() == 0) {
             return 0;
@@ -60,7 +60,7 @@ public class Solution10 {
 
         int i = 0;
         int length = haystack.length() - needle.length();
-        if (length < 0 ) {
+        if (length < 0) {
             return -1;
         }
         for (; i <= length; i++) {

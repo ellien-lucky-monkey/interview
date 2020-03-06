@@ -30,9 +30,8 @@ public class HeapSort {
             arr[0] = arr[k];
             arr[k] = tmp;
             heapify(arr, 0, k);
+
         }
-
-
     }
 
     /**
