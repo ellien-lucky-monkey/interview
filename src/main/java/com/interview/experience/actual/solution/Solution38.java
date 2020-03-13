@@ -1,6 +1,10 @@
 package com.interview.experience.actual.solution;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Solution38 {
+
     public static void main(String[] args) {
 
     }
@@ -36,11 +40,38 @@ public class Solution38 {
      *
      * 来源：力扣（LeetCode）
      * 链接：https://leetcode-cn.com/problems/count-and-say
-     *
-     * @param n
-     * @return
      */
     public String countAndSay(int n) {
-        return "";
+        if (n == 1) {
+            return "1";
+        }
+        String ans = "1";
+        for (int i = 2; i <= n; i++) {
+            ans = countNum(ans);
+        }
+        return ans;
+    }
+
+
+    //从2开始每一次都把上一次的计算结果返回
+    // 每一次集合中都把相同的进行分组存入
+    public String countNum(String s) {
+        String ans = "";
+        char tem = s.charAt(0);
+        List<String> list = new ArrayList<>(s.length());
+        int start = 0;
+        for (int i = start; i < s.length(); i++) {
+            if (s.charAt(i) != tem) {
+                list.add(s.substring(start, i));
+                start = i;
+                tem = s.charAt(i);
+            }
+        }
+
+        list.add(s.substring(start, s.length()));
+        for (int j = 0; j < list.size(); j++) {
+            ans += list.get(j).length() + list.get(j).substring(0, 1);
+        }
+        return ans;
     }
 }
