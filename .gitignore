@@ -25,7 +25,7 @@ target
 /.classpath
 /.project
 jira.mapping
-src/main/webapp/WEB-INF/fis.properties
+ekl/src/main/webapp/WEB-INF/fis.properties
 .eclipse-pmd
 
 # ignore idea files
