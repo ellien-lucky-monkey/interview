@@ -68,7 +68,6 @@ public class ActualApplicationTests {
     @Test
     public void aopService_single() {
         aopService.initAop();
-        aopService.initAop();
     }
 
 }

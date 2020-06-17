@@ -11,16 +11,18 @@ import org.springframework.stereotype.Component;
 public class Aop2 {
 
     @Pointcut(value = "@annotation(Asp)")
-    public void apo1() {
+    public void apo2() {
 
     }
 
-    @Around(value = "apo1()")
+    @Around(value = "apo2()")
     public Object around(final ProceedingJoinPoint joinPoint) throws Throwable {
-        System.out.println(String.format("Aop2 annotationAsp start 线程%s, 执行annotationAsp方法 hashcode: %s", Thread.currentThread().getName(), "apo1".hashCode()));
+        System.out.println(String.format("Aop2 annotationAsp start 线程%s, 执行annotationAsp方法 hashcode: %s", Thread.currentThread().getName(), "apo2".hashCode()));
         if ("pool-1-thread-2".equals(Thread.currentThread().getName())) {
             throw new RuntimeException("");
         }
-        return joinPoint.proceed();
+        Object proceed = joinPoint.proceed();
+        System.out.println("apo2 = " + proceed.toString());
+        return proceed;
     }
 }

@@ -11,15 +11,15 @@ import org.springframework.stereotype.Component;
 public class Aop1 {
 
     @Pointcut(value = "execution(* com.interview.experience.actual.aop.AopService.initAop(..))")
-    public void apo2() {
+    public void apo1() {
 
     }
 
-    @Around(value = "apo2()")
+    @Around(value = "apo1()")
     public Object around(final ProceedingJoinPoint joinPoint) throws Throwable {
-        System.out.println(String.format("Aop1 initAop start 线程%s, 执行initAop方法 hashcode: %s", Thread.currentThread().getName(), "apo2".hashCode()));
+        System.out.println(String.format("Aop1 initAop start 线程%s, 执行initAop方法 hashcode: %s", Thread.currentThread().getName(), "apo1".hashCode()));
         Object proceed = joinPoint.proceed();
-        System.out.println("proceed = " + proceed.toString());
+        System.out.println("apo1 = " + proceed.toString());
         return proceed;
     }
 }
