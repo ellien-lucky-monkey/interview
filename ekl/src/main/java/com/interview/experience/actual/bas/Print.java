@@ -1,5 +1,8 @@
 package com.interview.experience.actual.bas;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Print {
     private boolean printA = true;
 
@@ -47,6 +50,20 @@ public class Print {
 
 
     public static void main(String[] args) throws InterruptedException {
-        new Print();
+        List<Integer> integers = new ArrayList<>();
+        integers.add(1);
+        integers.add(2);
+        integers.add(3);
+
+
+        integers.forEach(k -> {
+                    for (int i = 1; i < 50; i++) {
+                        if (i == 13) {
+                            continue;
+                        }
+                        System.out.println("args = " + i);
+                    }
+                }
+        );
     }
 }
